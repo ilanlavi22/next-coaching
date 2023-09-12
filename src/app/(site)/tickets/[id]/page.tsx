@@ -12,7 +12,7 @@ type Params = {
 
 // export async function generateStaticParams() {
 //   const res = await fetch(
-//     'https://64f10ef00e1e60602d2392f2.mockapi.io/tickets'
+//     `https://${process.env.MOCKAPI_KEY}.mockapi.io/tickets`
 //   );
 //   const tickets = await res.json();
 
