@@ -1,5 +1,10 @@
-import CreateTicket from './CreateTicket';
+import CreateTicketForm from './CreateTicketForm';
 
 export default function page() {
-  return <CreateTicket />;
+  return (
+    <>
+      <h1>Add Ticket</h1>
+      <CreateTicketForm />
+    </>
+  );
 }

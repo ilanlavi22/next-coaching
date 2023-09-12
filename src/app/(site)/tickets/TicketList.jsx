@@ -4,8 +4,13 @@ async function getTickets() {
   //await new Promise((resolve) => setTimeout(resolve, 3000));
   const res = await fetch(
     'https://64f10ef00e1e60602d2392f2.mockapi.io/tickets',
+    // {
+    //   cache: 'no-store',
+    // }
     {
-      cache: 'no-store',
+      next: {
+        tags: ['tickets'],
+      },
     }
   );
 
@@ -22,7 +27,7 @@ async function getTickets() {
 export default async function TicketList() {
   const tickets = await getTickets();
   const ticketsSorted = [...tickets].sort((a, b) => {
-    return b.id.localeCompare(a.id);
+    return a.id.localeCompare(a - b);
   });
 
   return (
