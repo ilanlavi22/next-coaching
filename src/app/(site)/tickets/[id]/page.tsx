@@ -40,7 +40,7 @@ export async function generateMetadata(
 
 async function getSingleTicket(id: string) {
   const res = await fetch(
-    `https://64f10ef00e1e60602d2392f2.mockapi.io/tickets/${id}`
+    `https://${process.env.MOCKAPI_KEY}.mockapi.io/tickets/${id}`
   );
 
   if (!res.ok) {
