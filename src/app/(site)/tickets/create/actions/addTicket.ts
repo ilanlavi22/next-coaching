@@ -18,7 +18,7 @@ export const addTicket = async (e: FormData) => {
     priority,
   };
 
-  await fetch('https://64f10ef00e1e60602d2392f2.mockapi.io/tickets', {
+  await fetch(`https://${process.env.MOCKAPI_KEY}.mockapi.io/tickets`, {
     //cache: 'no-cache',
     method: 'POST',
     body: JSON.stringify(newTicket),
