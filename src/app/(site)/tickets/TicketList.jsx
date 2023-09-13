@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { deleteTicket } from './create/actions/deleteTicket';
 import Button from './components/Button';
 
 async function getTickets() {
