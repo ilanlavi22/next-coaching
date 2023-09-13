@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { deleteTicket } from './create/actions/deleteTicket';
+import Button from './components/Button';
 
 async function getTickets() {
   //await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -40,13 +42,17 @@ export default async function TicketList() {
       )}
 
       {ticketsSorted.map((ticket) => (
-        <div key={ticket.id}>
-          <Link href={`tickets/${ticket.id}`}>
+        <div key={ticket.id} className=''>
+          <Link
+            href={`tickets/${ticket.id}`}
+            className='bg-white flex gap-4 p-4 m-4'
+          >
             <h3 className='font-bold'>{ticket.title}</h3>
             <h6>{ticket.priority}</h6>
             {/* <p>{ticket.body.slice(0, 200)} ...</p> */}
             <p className=' line-clamp-1'>{ticket.body}</p>
           </Link>
+          <Button id={ticket.id} />
         </div>
       ))}
     </div>
