@@ -1,12 +1,15 @@
 'use client';
 import { useState } from 'react';
 
-export default function AuthForm() {
+export default function AuthForm({ handleSubmit }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <form className='mt-5 p-5 m-auto w-full max-w-md space-y-6 border-[1px] border-gray-600 rounded-md shadow-sm '>
+    <form
+      onSubmit={handleSubmit(email, password)}
+      className='mt-5 p-5 m-auto w-full max-w-md space-y-6 border-[1px] border-gray-600 rounded-md shadow-sm '
+    >
       <div className='flex flex-col space-y-3'>
         <label htmlFor='email'>Email</label>
         <input
