@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './components/Button';
+import Button from './components/DeleteTicketButton';
 
 async function getTickets() {
   //await new Promise((resolve) => setTimeout(resolve, 3000));

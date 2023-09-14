@@ -6,6 +6,7 @@ export default function Nav() {
       <Link href='/'>Home</Link>
       <Link href='/tickets'>Tickets</Link>
       <Link href='/tickets/create'>Create Ticket</Link>
+      <Link href='/login'>Login</Link>
     </nav>
   );
 }
